@@ -1,5 +1,5 @@
 #include "SettingsTab.hxx"
-#include "../../lib/Settings.hxx"
+#include "lib/Settings.hxx"
 
 #include <QLabel>
 #include <QStyle>

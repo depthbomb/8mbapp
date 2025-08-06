@@ -1,6 +1,6 @@
+#include "lib/Settings.hxx"
 #include "tabs/AboutTab.hxx"
 #include "SettingsWindow.hxx"
-#include "../lib/Settings.hxx"
 #include "tabs/SettingsTab.hxx"
 
 #include <QTabWidget>

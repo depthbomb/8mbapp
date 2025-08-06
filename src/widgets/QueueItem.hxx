@@ -1,5 +1,5 @@
 #pragma once
-#include "../lib/RemoteManager.hxx"
+#include "lib/RemoteManager.hxx"
 
 #include <QLabel>
 #include <QWidget>

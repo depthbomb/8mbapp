@@ -2,7 +2,6 @@
 #include "QueueItem.hxx"
 #include "QueuePlaceholder.hxx"
 
-
 #include <QObject>
 #include <QScrollArea>
 #include <QVBoxLayout>

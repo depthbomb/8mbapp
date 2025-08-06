@@ -1,6 +1,6 @@
 #include "MainWindow.hxx"
+#include "lib/Settings.hxx"
 #include "SettingsWindow.hxx"
-#include "../lib/Settings.hxx"
 
 #include <QFileDialog>
 #include <QMessageBox>

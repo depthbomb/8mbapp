@@ -1,11 +1,10 @@
+#include "Globals.hxx"
 #include "AboutTab.hxx"
 
 #include <QLabel>
 #include <QGroupBox>
 #include <QMessageBox>
 #include <QVBoxLayout>
-
-#include "../../Globals.hxx"
 
 AboutTab::AboutTab(QWidget* parent)
     : QWidget(parent) {

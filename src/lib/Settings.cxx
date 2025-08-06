@@ -1,4 +1,4 @@
-#include "../Globals.hxx"
+#include "Globals.hxx"
 #include "Settings.hxx"
 
 #include <QDir>

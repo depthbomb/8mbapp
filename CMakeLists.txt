@@ -38,6 +38,8 @@ file(GLOB_RECURSE SOURCES CONFIGURE_DEPENDS src/*.cpp src/*.cxx src/*.h src/*.hx
 
 add_executable(8mbapp ${SOURCES} ${APP_RESOURCES} ${RESOURCE_FILES})
 
+target_include_directories(8mbapp PRIVATE ${CMAKE_SOURCE_DIR}/src)
+
 target_link_libraries(8mbapp
         Qt::Core
         Qt::Gui
