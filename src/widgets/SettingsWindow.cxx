@@ -34,6 +34,8 @@ SettingsWindow::SettingsWindow(const bool intro, QWidget *parent)
     setWindowTitle("Settings");
     setWindowIcon(QIcon(":/icons/icon.ico"));
     setLayout(mainLayout);
+    adjustSize();
+    setFixedSize(size());
 }
 
 void SettingsWindow::closeEvent(QCloseEvent* event) {
