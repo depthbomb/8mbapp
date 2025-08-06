@@ -1,0 +1,7 @@
+bin/*
+cmake-build-*/
+
+# Generated files
+8mbapp.rc
+src/Globals.hxx
+setup/setup.iss

@@ -1,0 +1,8 @@
+<RCC>
+    <qresource>
+        <file>images/help.svg</file>
+        <file>images/icon.png</file>
+        <file>images/settings.svg</file>
+        <file>images/video.png</file>
+    </qresource>
+</RCC>

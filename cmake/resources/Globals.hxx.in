@@ -1,0 +1,35 @@
+#pragma once
+#include <QDateTime>
+#include <QStandardPaths>
+
+namespace Globals {
+inline constexpr auto APP_NAME = "@APP_NAME@";
+inline constexpr auto APP_DISPLAY_NAME = "@APP_DISPLAY_NAME@";
+inline constexpr auto APP_ORG = "@APP_ORG@";
+inline constexpr auto APP_USER_MODEL_ID = u"@APP_USER_MODEL_ID@";
+
+inline constexpr int APP_VERSION_MAJOR = @APP_VERSION_MAJOR@;
+inline constexpr int APP_VERSION_MINOR = @APP_VERSION_MINOR@;
+inline constexpr int APP_VERSION_PATCH = @APP_VERSION_PATCH@;
+inline constexpr int APP_VERSION_BUILD = @APP_VERSION_BUILD@;
+
+inline const auto APP_BUILD_DATE = QDateTime::fromString(QStringLiteral("@APP_BUILD_DATE@"), Qt::ISODate);
+
+inline constexpr auto APP_VERSION_STRING = "@APP_VERSION@";
+
+inline constexpr auto APP_GIT_HASH = "@APP_GIT_HASH@";
+inline constexpr auto APP_COMMIT_URL = "https://github.com/@APP_REPO_OWNER@/@APP_REPO_NAME@/commit/@APP_GIT_HASH@";
+
+inline constexpr auto APP_REPO_OWNER = "@APP_REPO_OWNER@";
+inline constexpr auto APP_REPO_NAME = "@APP_REPO_NAME@";
+inline constexpr auto APP_REPO_URL = "https://github.com/@APP_REPO_OWNER@/@APP_REPO_NAME@";
+inline constexpr auto APP_LATEST_RELEASE_URL = "https://github.com/@APP_REPO_OWNER@/@APP_REPO_NAME@/releases/latest";
+inline constexpr auto APP_NEW_ISSUE_URL = "https://github.com/@APP_REPO_OWNER@/@APP_REPO_NAME@/issues/new/choose";
+
+inline constexpr auto USER_AGENT = "@APP_DISPLAY_NAME@/@APP_VERSION@ (@APP_REPO_OWNER@/@APP_REPO_NAME@)";
+inline constexpr auto BROWSER_USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36";
+
+inline const QString APPDATA_DIR = QStandardPaths::writableLocation(QStandardPaths::AppDataLocation);
+inline const QString DATA_DIR = APPDATA_DIR + "/" + APP_ORG + "/" + APP_NAME;
+inline const QString SETTINGS_FILE_PATH = DATA_DIR + "/client_prefs.bin";
+}

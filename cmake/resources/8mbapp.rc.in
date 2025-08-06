@@ -1,0 +1,35 @@
+#include <windows.h>
+
+AppIcon ICON "resources/icons/icon.ico"
+
+VS_VERSION_INFO VERSIONINFO
+FILEVERSION     @APP_VERSION_MAJOR@,@APP_VERSION_MINOR@,@APP_VERSION_PATCH@,@APP_VERSION_BUILD@
+PRODUCTVERSION  @APP_VERSION_MAJOR@,@APP_VERSION_MINOR@,@APP_VERSION_PATCH@,@APP_VERSION_BUILD@
+FILEFLAGSMASK   VS_FFI_FILEFLAGSMASK
+FILEFLAGS       VS_FF_SPECIALBUILD
+FILEOS          VOS__WINDOWS32
+FILETYPE        VFT_APP
+FILESUBTYPE     0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "CompanyName",      "@APP_ORG@"
+            VALUE "FileDescription",  "@APP_DESCRIPTION@"
+            VALUE "FileVersion",      "@APP_VERSION@"
+            VALUE "SpecialBuild",     "@APP_GIT_HASH@"
+            VALUE "InternalName",     "@APP_NAME@"
+            VALUE "OriginalFilename", "@APP_NAME@"
+            VALUE "ProductName",      "@APP_DISPLAY_NAME@"
+            VALUE "ProductVersion",   "@APP_VERSION@"
+            VALUE "LegalCopyright",   "@APP_COPYRIGHT@"
+            VALUE "Licenses",         "MIT"
+        END
+    END
+
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x0409, 1200
+    END
+END
