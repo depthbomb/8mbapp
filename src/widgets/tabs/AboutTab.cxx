@@ -20,18 +20,16 @@ AboutTab::AboutTab(QWidget* parent)
             const auto versionGroupBox = new QGroupBox("Application Info");
             {
                 const auto vbox = new QVBoxLayout;
-                const auto label = new QLabel(
-                    QString(R"(v%1 (<a href="%2">%3</a>) &bull; <a href="%4">Source Code</a> &bull; Compiled %5)").arg(
-                        Globals::APP_VERSION_STRING,
-                        Globals::APP_COMMIT_URL,
-                        Globals::APP_GIT_HASH,
-                        Globals::APP_REPO_URL,
-                        Globals::APP_BUILD_DATE.toString()
-                    )
+                const auto versionLabel = new QLabel(
+                QString(R"(Version %1 - <a href="%2">%3</a>)")
+                    .arg(Globals::APP_VERSION_STRING, Globals::APP_COMMIT_URL, Globals::APP_GIT_HASH)
                 );
-                label->setOpenExternalLinks(true);
+                versionLabel->setOpenExternalLinks(true);
 
-                vbox->addWidget(label);
+                vbox->addWidget(versionLabel);
+                vbox->addWidget(new QLabel(
+                    QString(R"(Built on %1)").arg(Globals::APP_BUILD_DATE.toString())
+                ));
                 versionGroupBox->setLayout(vbox);
             }
 
