@@ -1,4 +1,3 @@
-#include "LinkLabel.hxx"
 #include "tabs/AboutTab.hxx"
 #include "SettingsWindow.hxx"
 #include "../lib/Settings.hxx"

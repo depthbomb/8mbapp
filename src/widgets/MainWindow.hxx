@@ -1,6 +1,5 @@
 #pragma once
 #include "QueueArea.hxx"
-#include "LinkLabel.hxx"
 
 #include <QObject>
 #include <QTextEdit>
@@ -27,5 +26,5 @@ private:
     QueueArea m_queueArea;
     QPushButton m_mainButton;
     QPushButton m_cancelButton;
-    LinkLabel m_settingsLink;
+    QLabel m_settingsLabel;
 };

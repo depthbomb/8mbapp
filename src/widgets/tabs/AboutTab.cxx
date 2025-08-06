@@ -1,5 +1,4 @@
 #include "AboutTab.hxx"
-#include "../LinkLabel.hxx"
 
 #include <QLabel>
 #include <QGroupBox>
@@ -50,9 +49,9 @@ AboutTab::AboutTab(QWidget* parent)
             const auto technologiesGroupBox = new QGroupBox("Technologies");
             {
                 const auto hbox = new QHBoxLayout;
-                const auto link = new LinkLabel("Qt Framework");
+                const auto link = new QLabel("<a href=\"#\">Qt Framework</a>");
 
-                connect(link, &LinkLabel::clicked, this, [this] {
+                connect(link, &QLabel::linkActivated, this, [this] {
                     QMessageBox::aboutQt(this);
                 });
 

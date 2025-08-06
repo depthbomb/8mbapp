@@ -7,7 +7,7 @@
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent),
-    m_settingsLink("Settings") {
+    m_settingsLabel("<a href=\"#\">Settings</a>") {
 
     const auto mainWidget = new QWidget;
     const auto mainLayout = new QVBoxLayout;
@@ -17,7 +17,7 @@ MainWindow::MainWindow(QWidget *parent)
             buttonsLayout->addWidget(&m_mainButton);
             buttonsLayout->addWidget(&m_cancelButton);
             buttonsLayout->addStretch();
-            buttonsLayout->addWidget(&m_settingsLink);
+            buttonsLayout->addWidget(&m_settingsLabel);
             buttonsLayout->setContentsMargins(0, 0, 0, 0);
         }
 
@@ -37,7 +37,7 @@ MainWindow::MainWindow(QWidget *parent)
     connect(&m_cancelButton, &QPushButton::clicked, this, [&] {
         m_queueArea.stop();
     });
-    connect(&m_settingsLink, &LinkLabel::clicked, this, &MainWindow::onSettingsLinkClicked);
+    connect(&m_settingsLabel, &QLabel::linkActivated, this, &MainWindow::onSettingsLinkClicked);
 
     setWindowIcon(QIcon(":/icons/icon.ico"));
     setCentralWidget(mainWidget);
